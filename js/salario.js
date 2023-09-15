@@ -4,9 +4,9 @@ const mensagemContainer = document.querySelector(".mensagem-container");
 const mensagem = document.querySelector(".mensagem");
 const calcularSalarioBtn = document.getElementById("calcularSalario");
 
-calcularSalarioBtn.addEventListener("click", calcularSalario);
 
-function calcularSalario(event){
+function calcularSalario(){
+    
     event.preventDefault();
     const salarioAtual = parseFloat(salario.value);
     var novoSalario = 0;
@@ -36,4 +36,9 @@ function calcularSalario(event){
     mensagem.innerHTML = "Esse é o seu salário atual: " + salarioAtual;
     mensagem.innerHTML += "<br>O seu aumento: " + aumentoPercentual + "%";
     mensagem.innerHTML += "<br>O seu novo salário será: " + novoSalario;
+    console.log(mensagem, mensagemContainer);
+    console.log(salario);
+    console.log(cargo);
+    console.log(mensagemContainer);
+    console.log(mensagem);
 }
