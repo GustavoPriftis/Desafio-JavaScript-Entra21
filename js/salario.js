@@ -1,30 +1,39 @@
 const salario = document.getElementById("salario");
 const cargo = document.getElementById("cargo");
-const mensagem = document.getElementById("mensagem");
+const mensagemContainer = document.querySelector(".mensagem-container");
+const mensagem = document.querySelector(".mensagem");
+const calcularSalarioBtn = document.getElementById("calcularSalario");
 
-function calcularSalario(){
+calcularSalarioBtn.addEventListener("click", calcularSalario);
+
+function calcularSalario(event){
     event.preventDefault();
-    switch(cargo){
-        case cargo.value = "gerente":
-            var salarioGerente = parseFloat(salario.value + (0.05 * salario));
-            mensagem.innerHTML() = ("Esse é o seu salário atual: " + salario);
-            mensagem.innerHTML() = ("O seu aumento: " + 0.05 * 100 + "%");
-            mensagem.innerHTML() = ("O seu novo salário será: " + salarioGerente);
-        case cargo.value = "supervisor":
-            var salarioSupervisor = parseFloat(salario.value + (0.08 * salario));
-            mensagem.innerHTML() = ("Esse é o seu salário atual: " + salario);
-            mensagem.innerHTML() = ("O seu aumento: " + 0.08 * 100 + "%");
-            mensagem.innerHTML() = ("O seu novo salário será: " + salarioSupervisor);
-        case cargo.value = "operador":
-            var salarioOperador = salario + (0.09 * salario);
-            mensagem.innerHTML() = ("Esse é o seu salário atual: " + salario);
-            mensagem.innerHTML() = ("O seu aumento: " + 0.09 * 100 + "%");
-            mensagem.innerHTML() = ("O seu novo salário será: " + salarioOperador);
-        case cargo.value = "demaisColaborador":
-            var salarioColaborador = salario + (0.10 * salario);
-            mensagem.innerHTML() = ("Esse é o seu salário atual: " + salario);
-            mensagem.innerHTML() = ("O seu aumento: " + 0.10 * 100 + "%");
-            mensagem.innerHTML() = ("O seu novo salário será: " + salarioColaborador);
+    const salarioAtual = parseFloat(salario.value);
+    var novoSalario = 0;
+    var aumentoPercentual = 0;
+
+    switch(cargo.value){
+        case "gerente":
+            aumentoPercentual = 5;
+            novoSalario = salarioAtual + (0.05 * salarioAtual);
+            break;
+        case "supervisor":
+            aumentoPercentual = 8;
+            novoSalario = salarioAtual + (0.08 * salarioAtual);
+            break;
+        case "operador":
+            aumentoPercentual = 9;
+            novoSalario = salarioAtual + (0.09 * salarioAtual);
+            break;
+        case "demaisColaborador":
+            aumentoPercentual = 10;
+            novoSalario = salarioAtual + (0.10 * salarioAtual);
+            break;
+        default:
+            mensagem.innerHTML = "Cargo não encontrado";
+            return;
     }
+    mensagem.innerHTML = "Esse é o seu salário atual: " + salarioAtual;
+    mensagem.innerHTML += "<br>O seu aumento: " + aumentoPercentual + "%";
+    mensagem.innerHTML += "<br>O seu novo salário será: " + novoSalario;
 }
-calcularSalario.addEventListener("click", function (){calcularSalario()})

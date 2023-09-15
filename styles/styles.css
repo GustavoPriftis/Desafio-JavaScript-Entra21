@@ -87,3 +87,20 @@ body{
     text-align: center;
     font-size: 1.2em ;
 }
+.mensagemContainer{
+    display:block;
+    background: #333436;
+    color: #fff;
+    margin: 5% ;
+    padding: 1%;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    border: 0.1em solid hsl(30, 20%, 40%);
+    border-radius: 0em;
+    font-size: large;
+    width: 17%;
+    margin: 1rem auto;
+}
+.mensagem{
+    display: contents;
+}
