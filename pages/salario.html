@@ -20,10 +20,16 @@
             <input type="number" id="salario" placeholder="Digite aqui">
         </div>
         <div>
-            <label for="cargo">Informe o seu cargo: </label>
-            <input type="select" id="cargo" placeholder="Digite aqui" required>
+            <label for="cargo">Cargo:</label>
+            <select id="cargo">
+                <option selected disabled value="">Selecione</option>
+                <option value="gerente">Gerente</option>
+                <option value="supervisor">Supervisor</option>
+                <option value="operador">Operador</option>
+                <option value="demaisColaborador">Outro</option>
+            </select>
         </div>
-        <button id="botao" onclick="gravar()">Calcular variação do salário</button>
+        <button id="botao">Calcular</button>
     </fieldset>
     <div class="mensagem-container">
         <p class="mensagem"></p>
