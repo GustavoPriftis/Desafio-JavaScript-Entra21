@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Aumento do salário</title>
+</head>
+
+<body>
+    <script src="../js/header.js"></script>
+    <div class="titulos">
+        <h1 class="titulo">Verificar novo salário</h1>
+        <p class="subtitulo">Esse cálculo irá lhe informar o novo sálario após os ajustes</p>
+    </div>
+    <fieldset class="formulario">
+        <div>
+            <label for="salario">Informe o seu salário:</label>
+            <input type="number" id="salario" placeholder="Digite aqui">
+        </div>
+        <div>
+            <label for="cargo">Informe o seu cargo: </label>
+            <input type="select" id="cargo" placeholder="Digite aqui" required>
+        </div>
+        <button id="botao" onclick="gravar()">Calcular variação do salário</button>
+    </fieldset>
+    <div class="mensagem-container">
+        <p class="mensagem"></p>
+    </div>
+    <script src="../js/footer.js"></script>
+</body>
+
+</html>

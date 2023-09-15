@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'poppins', sans-serif ;
+    box-sizing: border-box;
+}
+.header{
+    background: #1d2026;
+    min-height: 9%;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    top: 0%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+}
+nav .logo{
+    width: 100px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:#fff;
+    padding: 0.5em;
+    margin: 0em;
+    overflow: auto;
+    border: 0.1em solid hsl(30, 20%, 40%);
+    border-radius: 0em;
+    box-shadow: 1px 1px 0.5em black inset
+}
+.text-container{
+    background: #333436;
+    color: #fff;
+    width: auto;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 0em;
+    border: 0.1em solid hsl(30, 20%, 40%);
+    border-radius: 0em;
+    box-shadow: 1px 1px 0.5em black inset;
+    height: 41vh;
+    
+}
+.formulario{
+    background: #333436;
+    color: #fff;
+    margin: 5% ;
+    padding: 1%;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    border: 0.1em solid hsl(30, 20%, 40%);
+    border-radius: 0em;
+    font-size: large;
+    width: 17%;
+    margin: 1rem auto;
+  }
+.footer{
+    background: #1d20269c;
+    color: #fff;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+}
+.logotipo-do-linkedin, .logotipo-do-github{
+    width: 19px;
+    cursor: pointer;
+}
+body{
+    background-color:#1d2026;
+}
+.titulos{
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em ;
+}

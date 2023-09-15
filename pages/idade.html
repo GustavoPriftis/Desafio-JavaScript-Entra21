@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Verificação da idade</title>
+</head>
+
+<body>
+    <script src="../js/header.js"></script>
+    <p id="idade" </p>
+    <div class="titulos">
+        <h1 class="titulo">Validação da idade</h1>
+        <p id="subtitulo"></p>
+    </div>
+    <form>
+        <fieldset class="formulario">
+            <div>
+                <label for="data_nascimento">Informe a sua data de nascimento, por gentileza:</label>
+                <input type="date" id="data_nascimento">
+            </div>
+            <button id="botao" onclick="gravar()">Gravar</button>
+        </fieldset>
+    </form>
+    <div class="mensagem-container">
+        <p class="mensagem"></p>
+    </div>
+    <script src="../js/footer.js"></script>
+</body>
+<script type="text/javascript" src="../js/validacao.js"></script>
+
+</html>
