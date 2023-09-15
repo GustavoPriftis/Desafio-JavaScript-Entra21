@@ -1,8 +1,9 @@
-const nota1 = document.getElementById("nota1")
-const nota2 = document.getElementById("nota2")
-const nota3 = document.getElementById("nota3")
-const frequencia = document.getElementById("frequencia")
-const mensagem = document.getElementById("mensagem")
+const nota1 = document.getElementById("nota1");
+const nota2 = document.getElementById("nota2");
+const nota3 = document.getElementById("nota3");
+const frequencia = document.getElementById("frequencia");
+const mensagemContainer = document.querySelector(".mensagemContainer");
+const mensagem = document.querySelector(".mensagem");
 
 function media(){
     event.preventDefault();
@@ -13,5 +14,4 @@ function media(){
         mensagem.innerHTML() = "Aprovado"
     }
     else mensagem.innerHTML() = "Reprovado"; 
-    media.addEventListener("click", function() { media()});
 }

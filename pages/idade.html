@@ -10,7 +10,7 @@
 
 <body>
     <script src="../js/header.js"></script>
-    <p id="idade" </p>
+    <p id="idade"></p>
     <div class="titulos">
         <h1 class="titulo">Validação da idade</h1>
         <p id="subtitulo"></p>
@@ -21,11 +21,11 @@
                 <label for="data_nascimento">Informe a sua data de nascimento, por gentileza:</label>
                 <input type="date" id="data_nascimento">
             </div>
-            <button id="botao">Gravar</button>
+            <button id="validarBtn" onclick="validar()">Gravar</button>
         </fieldset>
     </form>
     <div class="mensagemContainer">
-        <p class="mensagem"></p>
+        <p class="mensagem">Resultado: </p>
     </div>
     <script src="../js/footer.js"></script>
 </body>

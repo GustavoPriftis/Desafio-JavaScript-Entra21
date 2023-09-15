@@ -1,7 +1,8 @@
-const altura = document.getElementById("altura")
-const peso = document.getElementById("peso")
-const calcular = document.getElementById("calcular")
-const mensagem = document.getElementById("mensagem")
+const altura = document.getElementById("altura");
+const peso = document.getElementById("peso");
+const calcular = document.getElementById("calcular");
+const mensagemContainer = document.querySelector(".mensagemContainer");
+const mensagem = document.querySelector(".mensagem");
 
 function resultado() {
     var valorIMC 
