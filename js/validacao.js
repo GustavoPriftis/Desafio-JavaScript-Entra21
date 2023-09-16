@@ -1,9 +1,10 @@
-const dataNascimento = document.getElementById("data_nascimento");
-const mensagemContainer = document.querySelector(".mensagemContainer");
-const mensagem = document.querySelector(".mensagem");
-const validarBtn = document.getElementById("validar");
+
 
 function validar() {
+    const dataNascimento = document.getElementById("data_nascimento");
+    const mensagemContainer = document.querySelector(".mensagemContainer");
+    const mensagem = document.querySelector(".mensagem");
+    const validarBtn = document.getElementById("validar");
     event.preventDefault();
     if (dataNascimento.value != "") {
         var hoje = new Date();
@@ -16,9 +17,9 @@ function validar() {
             idade--;
         }
         if (idade >= 18) {
-            mensagem.innerHTML = "Você tem: " + idade + "Obrigado por informar a idade, prossiga aos outros desafios :)";
+            mensagem.innerHTML = "Você tem: " + idade + " Anos! Obrigado por informar a idade, prossiga aos outros desafios :)";
         } else {
-            mensagem.innerHTML = "Infelizmente você é menor de idade, você tem somente: " + idade  + " anos :)";
+            mensagem.innerHTML = "Infelizmente você é menor de idade, você tem somente: " + idade + " anos :)";
         }
     }
 }

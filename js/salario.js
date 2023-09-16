@@ -1,18 +1,15 @@
-const salario = document.getElementById("salario");
-const cargo = document.getElementById("cargo");
-const mensagemContainer = document.querySelector(".mensagem-container");
-const mensagem = document.querySelector(".mensagem");
-const calcularSalarioBtn = document.getElementById("calcularSalario");
-
-
-function calcularSalario(){
-    
+function calcularSalario() {
+    const salario = document.getElementById("salario");
+    const cargo = document.getElementById("cargo");
+    const mensagemContainer = document.querySelector(".mensagem-container");
+    const mensagem = document.querySelector(".mensagem");
+    const calcularSalarioBtn = document.getElementById("calcularSalario");
     event.preventDefault();
     const salarioAtual = parseFloat(salario.value);
     var novoSalario = 0;
     var aumentoPercentual = 0;
 
-    switch(cargo.value){
+    switch (cargo.value) {
         case "gerente":
             aumentoPercentual = 5;
             novoSalario = salarioAtual + (0.05 * salarioAtual);
