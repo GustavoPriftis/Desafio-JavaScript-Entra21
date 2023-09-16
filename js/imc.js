@@ -3,6 +3,7 @@ const peso = document.getElementById("peso");
 const calcular = document.getElementById("calcular");
 const mensagemContainer = document.querySelector(".mensagemContainer");
 const mensagem = document.querySelector(".mensagem");
+const calcularBtn = document.getElementById("resultado");
 
 function resultado() {
     var valorIMC 

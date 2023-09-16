@@ -1,7 +1,7 @@
 const dataNascimento = document.getElementById("data_nascimento");
 const mensagemContainer = document.querySelector(".mensagemContainer");
 const mensagem = document.querySelector(".mensagem");
-const validarBtn = document.getElementById("validate()");
+const validarBtn = document.getElementById("validar");
 
 function validar() {
     event.preventDefault();

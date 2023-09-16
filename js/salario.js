@@ -36,9 +36,4 @@ function calcularSalario(){
     mensagem.innerHTML = "Esse é o seu salário atual: " + salarioAtual;
     mensagem.innerHTML += "<br>O seu aumento: " + aumentoPercentual + "%";
     mensagem.innerHTML += "<br>O seu novo salário será: " + novoSalario;
-    console.log(mensagem, mensagemContainer);
-    console.log(salario);
-    console.log(cargo);
-    console.log(mensagemContainer);
-    console.log(mensagem);
 }

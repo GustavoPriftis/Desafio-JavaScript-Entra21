@@ -51,7 +51,6 @@ nav ul li a{
     border-radius: 0em;
     box-shadow: 1px 1px 0.5em black inset;
     height: 41vh;
-    
 }
 .formulario{
     background: #333436;
@@ -61,11 +60,13 @@ nav ul li a{
     border: 1px solid #ccc;
     border-radius: 1em;
     border: 0.1em solid hsl(30, 20%, 40%);
-    border-radius: 0em;
     font-size: large;
-    width: 17%;
+    width: 20%;
     margin: 1rem auto;
   }
+.formulario div input{
+    width: 86%;
+}
 .footer{
     background: #1d20269c;
     color: #fff;
@@ -96,7 +97,6 @@ body{
     border: 1px solid #ccc;
     border-radius: 1em;
     border: 0.1em solid hsl(30, 20%, 40%);
-    border-radius: 0em;
     font-size: large;
     width: 17%;
     margin: 1rem auto;
