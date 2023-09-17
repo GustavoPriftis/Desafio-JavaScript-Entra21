@@ -193,7 +193,7 @@ a:hover {
     letter-spacing: 4px;
 }
 
-main {
+main{
     background: url("../assets/bg.jpg") no-repeat center center;
     background-size: cover;
     height: 92vh;

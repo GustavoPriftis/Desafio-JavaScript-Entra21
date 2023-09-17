@@ -11,27 +11,28 @@
 
 <body>
     <script src="../js/header.js"></script>
-    <form>
-        <div class="titulos">
-            <h1 class="titulo">Calculadora de IMC</h1>
-            <p class="subtitulo">Informe o seu peso e altura para saber o seu índice de massa corporal</p>
+    <main>
+        <form>
+            <div class="titulos">
+                <h1 class="titulo">Calculadora de IMC</h1>
+                <p class="subtitulo">Informe o seu peso e altura para saber o seu índice de massa corporal</p>
+            </div>
+            <fieldset class="formulario">
+                <div>
+                    <label for="altura">Informe a sua altura:</label>
+                    <input type="number" id="altura" placeholder="Altura por cm" required>
+                </div>
+                <div>
+                    <label for="peso">Informe o seu peso:</label>
+                    <input type="number" id="peso" placeholder="Peso/KG" required>
+                </div>
+                <button id="calcularBtn" onclick="resultado()">Calcular</button>
+            </fieldset>
+        </form>
+        <div class="mensagemContainer">
+            <p class="mensagem">Resultado: </p>
         </div>
-        <fieldset class="formulario">
-            <div>
-                <label for="altura">Informe a sua altura:</label>
-                <input type="number" id="altura" placeholder="Altura por cm" required>
-            </div>
-            <div>
-                <label for="peso">Informe o seu peso:</label>
-                <input type="number" id="peso" placeholder="Peso/KG" required>
-            </div>
-            <button id="calcularBtn" onclick="resultado()">Calcular</button>
-        </fieldset>    
-    </form>
-    <div class="mensagemContainer">
-        <p class="mensagem">Resultado: </p>
-    </div>
-    <main></main>
+    </main>
     <script src="../js/footer.js"></script>
     <script src="../js/mediaAluno.js"></script>
     <script src="../js/imc.js"></script>

@@ -10,35 +10,37 @@
 
 <body>
     <script src="../js/header.js"></script>
-    <div class="titulos">
-        <h1 class="titulo">Verifique a média</h1>
-        <p class="subtitulo">Esse formulário irá calcular a média e frequência</p>
-    </div>
-    <form>
-        <fieldset class="formulario">
-            <div>
-                <label for="nota1">Informe a primeira nota: </label>
-                <input type="number" id="nota1" placeholder="Digite uma nota de 1 a 10" min="1" max="10" required>
-            </div>
-            <div>
-                <label for="nota2">Informe a segunda nota:</label>
-                <input type="number" id="nota2" placeholder="Digite uma nota de 1 a 10" min="1" max="10" required>
-            </div>
-            <div>
-                <label for="nota3">Informe a terceira nota</label>
-                <input type="number" id="nota3" placeholder="Digite uma nota de 1 a 10" min="1" max="10" required>
-            </div>
-            <div>
-                <label for="frequencia">Informe a frequência do aluno</label>
-                <input type="number" id="frequencia" placeholder="Digite a frequência entre 1 a 100" min="1" max="100" required>
-            </div>
-            <button id="mediaBtn" onclick="calcularMedia()">Calcular média</button>
-        </fieldset>
-    </form>
-    <div class="mensagemContainer">
-        <p class="mensagem">Resultado: </p>
-    </div>
-    <main></main>
+    <main>
+        <div class="titulos">
+            <h1 class="titulo">Verifique a média</h1>
+            <p class="subtitulo">Esse formulário irá calcular a média e frequência</p>
+        </div>
+        <form>
+            <fieldset class="formulario">
+                <div>
+                    <label for="nota1">Informe a primeira nota: </label>
+                    <input type="number" id="nota1" placeholder="Digite uma nota de 1 a 10" min="1" max="10" required>
+                </div>
+                <div>
+                    <label for="nota2">Informe a segunda nota:</label>
+                    <input type="number" id="nota2" placeholder="Digite uma nota de 1 a 10" min="1" max="10" required>
+                </div>
+                <div>
+                    <label for="nota3">Informe a terceira nota</label>
+                    <input type="number" id="nota3" placeholder="Digite uma nota de 1 a 10" min="1" max="10" required>
+                </div>
+                <div>
+                    <label for="frequencia">Informe a frequência do aluno</label>
+                    <input type="number" id="frequencia" placeholder="Digite a frequência entre 1 a 100" min="1"
+                        max="100" required>
+                </div>
+                <button id="mediaBtn" onclick="calcularMedia()">Calcular média</button>
+            </fieldset>
+        </form>
+        <div class="mensagemContainer">
+            <p class="mensagem">Resultado: </p>
+        </div>
+    </main>
     <script src="../js/footer.js"></script>
     <script src="../js/mobileNavbar.js"></script>
     <script src="../js/mediaAluno.js"></script>
