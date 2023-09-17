@@ -3,13 +3,17 @@
     padding: 0;
 }
 
-.header {
+header {
     background: #1d2026;
     min-height: 9%;
     width: 100%;
     color: #fff;
-    position: relative;
-    top: 0%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+body{
+    padding-top: 9vh;
 }
 
 nav {
@@ -108,19 +112,21 @@ nav {
     width: auto;
     font-size: 1.2rem;
     padding: 1rem;
-    margin: 0em;
     border: 0.1em solid hsl(30, 20%, 40%);
     border-radius: 0em;
     box-shadow: 1px 1px 0.5em black inset;
     height: contain;
 }
+.text-container ol li{
+    padding: 2vh;
+    margin-left: 10px;
+    
+}
 
 .formulario {
     background: #3334369e;
     color: #fff;
-    margin: 5%;
     padding: 1%;
-    border: 1px solid #ccc;
     border-radius: 1em;
     border: 0.1em solid hsl(30, 20%, 40%);
     font-size: large;
@@ -129,14 +135,17 @@ nav {
 }
 
 .formulario div input {
-    width: 200px
+    width: 90%;
+}
+fieldset{
+    width: ;
 }
 
-.footer {
+footer {
     background: #1d2026d0;
     color: #fff;
     bottom: 0px;
-    height: 9vh;
+    height: 4vh;
     width: 100%;
     text-align: center;
     position: fixed;
@@ -167,7 +176,6 @@ nav {
     font-size: large;
     width: 17vh;
     margin: 1rem auto;
-
 }
 
 .mensagem {
@@ -186,7 +194,7 @@ a:hover {
 }
 
 .logo {
-    width: 8vh;
+    width: 6vh;
     cursor: pointer;
     letter-spacing: 4px;
 }

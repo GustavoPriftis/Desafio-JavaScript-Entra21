@@ -1,7 +1,5 @@
 const header =
-    `<header>
-        
-        <nav>            
+    `   <nav>            
             <a href="../index.html"><img src="../assets/rede.png" class="logo"></a>
             <div class="mobile-menu">
                 <div class="line1"></div>
@@ -17,9 +15,7 @@ const header =
                 <li><a href="../pages/IMC.html">Exercício 4</a></li>
                 <li><a href="../pages/salario.html">Exercício 5</a></li>
             </ul>
-        </nav>
-     </header>
-     </div>`
-var a = document.createElement("header")
-document.body.appendChild(a)
-a.innerHTML = header
+        </nav>`
+var a = document.createElement("header");
+document.body.appendChild(a);
+a.innerHTML = header;

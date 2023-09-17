@@ -10,38 +10,39 @@
 </head>
 
 <body>
-    
+
     <script src="../js/header.js"></script>
     <main>
-    <div class="titulos">
-        <h1 class="titulo">Verificar novo salário</h1>
-        <p class="subtitulo">Esse cálculo irá lhe informar o novo sálario após os ajustes</p>
-    </div>
-    <fieldset class="formulario">
-        <div>
-            <label for="salario">Informe o seu salário:</label>
-            <input type="number" id="salario" placeholder="Digite aqui">
+        <div class="titulos">
+            <h1 class="titulo">Verificar novo salário</h1>
+            <p class="subtitulo">Esse cálculo irá lhe informar o novo sálario após os ajustes</p>
         </div>
-        <div>
-            <label for="cargo">Cargo:</label>
-            <select id="cargo">
-                <option selected disabled value="">Selecione</option>
-                <option value="gerente">Gerente</option>
-                <option value="supervisor">Supervisor</option>
-                <option value="operador">Operador</option>
-                <option value="demaisColaborador">Outro</option>
-            </select>
+        <fieldset class="formulario">
+            <div>
+                <label for="salario">Informe o seu salário:</label>
+                <input type="number" id="salario" placeholder="Digite aqui">
+            </div>
+            <div>
+                <label for="cargo">Cargo:</label>
+                <select id="cargo">
+                    <option selected disabled value="">Selecione</option>
+                    <option value="gerente">Gerente</option>
+                    <option value="supervisor">Supervisor</option>
+                    <option value="operador">Operador</option>
+                    <option value="demaisColaborador">Outro</option>
+                </select>
+            </div>
+            <button id="calcularSalarioBtn" onclick="calcularSalario()">Calcular salário</button>
+        </fieldset>
+        <div class="mensagemContainer">
+            <p class="mensagem">Resultado: </p>
         </div>
-        <button id="calcularSalarioBtn" onclick="calcularSalario()">Calcular salário</button>
-    </fieldset>
-    <div class="mensagemContainer">
-        <p class="mensagem">Resultado: </p>
-    </div>
+
+    </main>
+    
     <script src="../js/footer.js"></script>
     <script src="../js/mobileNavbar.js"></script>
     <script src="../js/salario.js"></script>
-    </main>
-   
 </body>
 
 </html>
