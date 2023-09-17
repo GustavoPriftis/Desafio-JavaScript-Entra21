@@ -4,7 +4,7 @@
 }
 
 header {
-    background: #1d2026;
+    background: #23232e;
     min-height: 9%;
     width: 100%;
     color: #fff;
@@ -12,8 +12,9 @@ header {
     top: 0;
     z-index: 1000;
 }
-body{
-    padding-top: 9vh;
+
+body {
+    padding-top: 8vh;
 }
 
 nav {
@@ -109,18 +110,19 @@ nav {
 .text-container {
     background: #3334369e;
     color: #fff;
-    width: auto;
     font-size: 1.2rem;
     padding: 1rem;
     border: 0.1em solid hsl(30, 20%, 40%);
-    border-radius: 0em;
+    border-radius: 2em;
     box-shadow: 1px 1px 0.5em black inset;
-    height: contain;
+    width: 45vh;
+    margin: auto;
+    margin-top: 0.65rem;
 }
-.text-container ol li{
+
+.text-container ol li {
     padding: 2vh;
     margin-left: 10px;
-    
 }
 
 .formulario {
@@ -130,52 +132,66 @@ nav {
     border-radius: 1em;
     border: 0.1em solid hsl(30, 20%, 40%);
     font-size: large;
-    width: 20%;
-    margin: 1rem auto;
+    width: 45vh;
+    margin: 2rem auto;
 }
 
-.formulario div input {
-    width: 90%;
-}
-fieldset{
-    width: ;
+input {
+    width: 100%;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 1px;
+    margin-bottom: 5px;
+    font-size: 14px
 }
 
 footer {
     background: #1d2026d0;
     color: #fff;
     bottom: 0px;
-    height: 4vh;
+    height: 5vh;
     width: 100%;
     text-align: center;
     position: fixed;
+    font-size: 18px
 }
 
 .logotipo-do-linkedin,
 .logotipo-do-github {
-    width: 15px;
+    padding: 0.3rem;
+    width: 1.4rem;
     cursor: pointer;
     display: inline-block;
 }
 
 .titulos {
-    color: #fff;
+    padding-top: 10vh;
     text-align: center;
     font-size: 1.2em;
+    font-weight: bold;
+}
+
+.titulo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #1d2026;
+}
+
+.subtitulo {
+    font-size: 16px;
+    color: #fff;
 }
 
 .mensagemContainer {
     display: block;
     background: #3334369e;
     color: #fff;
-    margin: 5%;
     padding: 1%;
-    border: 1px solid #ccc;
     border-radius: 1em;
     border: 0.1em solid hsl(30, 20%, 40%);
     font-size: large;
     width: 17vh;
-    margin: 1rem auto;
+    margin: 0.1em auto;
 }
 
 .mensagem {
@@ -203,4 +219,58 @@ main {
     background: url("../assets/bg.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh;
+}
+
+.btn {
+    justify-content: space-around;
+    margin-top: 10px;
+    display: flex;
+}
+button{
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.3rem;
+}
+button:hover {
+    opacity: 0.7;
+}
+
+.tabelaIMC {
+    text-align: center;
+    display: block;
+    background: #3334369e;
+    color: #fff;
+    padding: 2%;
+    border-radius: 1em;
+    border: 0.1em solid hsl(30, 20%, 40%);
+    font-size: 18px;
+    width: 27vh;
+    margin: 2rem auto;
+    border-collapse: collapse;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    border: 0.1em solid hsl(0, 0%, 100%);
+    padding: 1px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #3334369e;
+    text-align: center;
+    padding: 1px;
+    vertical-align: middle;
+}
+
+td:hover,
+th:hover {
+    background-color: gray;
+    opacity: 0.7;
 }

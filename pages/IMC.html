@@ -26,15 +26,57 @@
                     <label for="peso">Informe o seu peso:</label>
                     <input type="number" id="peso" placeholder="Peso/KG" required>
                 </div>
+                <div class="btn">
                 <button id="calcularBtn" onclick="resultado()">Calcular</button>
+                </div>
             </fieldset>
         </form>
         <div class="mensagemContainer">
             <p class="mensagem">Resultado: </p>
         </div>
+        <div class="tabelaIMC">
 
+                    </tr>            <h1>Tabela de IMC</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Classificação</th>
+                        <th>IMC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Muito Abaixo do Peso</td>
+                        <td>Menos de 17</td>
+                    </tr>
+                    <tr>
+                        <td>Abaixo do Peso</td>
+                        <td>17 - de 18.5</td>
+                    </tr>
+                    <tr>
+                        <td>Peso Normal</td>
+                        <td>18.5 - 24.99</td>
+                    </tr>
+                    <tr>
+                        <td>Sobrepeso</td>
+                        <td>25.0 - 29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Obesidade Grau I</td>
+                        <td>30.0 - 34.44</td>
+                    </tr>
+                    <tr>
+                        <td>Obesidade Grau II</td>
+                        <td>35.0 - 39.99</td>
+                    </tr>
+                    <tr>
+                        <td>Obesidade Grau III</td>
+                        <td>Mais de 40.0</td>
+                </tbody>
+            </table>    
+        </div>
     </main>
-    
+
     <script src="../js/footer.js"></script>
     <script src="../js/mobileNavbar.js"></script>
     <script src="../js/imc.js"></script>
