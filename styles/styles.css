@@ -53,7 +53,7 @@ nav {
         position: absolute;
         top: 8vh;
         right: 0;
-        width: 50vw;
+        width: 27vw;
         height: 92vh;
         background: #23232e;
         flex-direction: column;
@@ -70,6 +70,7 @@ nav {
 
     .mobile-menu {
         display: block;
+        margin-top: 5px;
     }
 }
 
@@ -101,12 +102,8 @@ nav {
     transform: rotate(45deg) translate(-5px, -7px);
 }
 
-.mobile-menu.active .line4 {}
-
-.mobile-menu.active .line5 {}
-
 .text-container {
-    background: #333436;
+    background: #3334369e;
     color: #fff;
     width: auto;
     font-size: 1.2rem;
@@ -115,11 +112,11 @@ nav {
     border: 0.1em solid hsl(30, 20%, 40%);
     border-radius: 0em;
     box-shadow: 1px 1px 0.5em black inset;
-    height: 41vh;
+    height: contain;
 }
 
 .formulario {
-    background: #333436;
+    background: #3334369e;
     color: #fff;
     margin: 5%;
     padding: 1%;
@@ -132,14 +129,14 @@ nav {
 }
 
 .formulario div input {
-    width: 86%;
+    width: 200px
 }
 
 .footer {
-    background: #1d20269c;
+    background: #1d2026d0;
     color: #fff;
     bottom: 0px;
-    height: 40px;
+    height: 9vh;
     width: 100%;
     text-align: center;
     position: fixed;
@@ -147,8 +144,9 @@ nav {
 
 .logotipo-do-linkedin,
 .logotipo-do-github {
-    width: 19px;
+    width: 15px;
     cursor: pointer;
+    display: inline-block;
 }
 
 .titulos {
@@ -159,7 +157,7 @@ nav {
 
 .mensagemContainer {
     display: block;
-    background: #333436;
+    background: #3334369e;
     color: #fff;
     margin: 5%;
     padding: 1%;
@@ -167,9 +165,9 @@ nav {
     border-radius: 1em;
     border: 0.1em solid hsl(30, 20%, 40%);
     font-size: large;
-    width: 17%;
+    width: 17vh;
     margin: 1rem auto;
-    
+
 }
 
 .mensagem {
@@ -193,8 +191,8 @@ a:hover {
     letter-spacing: 4px;
 }
 
-main{
+main {
     background: url("../assets/bg.jpg") no-repeat center center;
     background-size: cover;
-    height: 92vh;
+    height: 100vh;
 }

@@ -1,5 +1,3 @@
-
-
 function validar() {
     const dataNascimento = document.getElementById("data_nascimento");
     const mensagemContainer = document.querySelector(".mensagemContainer");
