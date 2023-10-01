@@ -272,3 +272,45 @@ th:hover {
     background-color: gray;
     opacity: 0.7;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    background-color: #f7f7f7;
+}
+
+.display {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
