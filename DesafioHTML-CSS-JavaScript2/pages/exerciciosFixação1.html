@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Ordenar Números</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Inserir e Ordenar Números</h2>
+                        <input type="number" id="numberInput" class="form-control mb-3" placeholder="Digite um número">
+                        <button id="insertButton" class="btn btn-primary">Inserir Número</button>
+                        <button id="sortButton" class="btn btn-success">Ordenar Números</button>
+                        <div id="resultContainer" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const numberInput = document.getElementById("numberInput");
+        const insertButton = document.getElementById("insertButton");
+        const sortButton = document.getElementById("sortButton");
+        const resultContainer = document.getElementById("resultContainer");
+
+        const numbersArray = [];
+
+        insertButton.addEventListener("click", () => {
+            const number = parseFloat(numberInput.value);
+            if (!isNaN(number)) {
+                numbersArray.push(number);
+                numberInput.value = "";
+            }
+        });
+
+        sortButton.addEventListener("click", () => {
+            const sortedNumbers = numbersArray.slice().sort((a, b) => a - b);
+            resultContainer.innerHTML = "Números em Ordem Crescente: " + sortedNumbers.join(", ");
+        });
+    </script>
+</body>
+</html>
