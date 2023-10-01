@@ -1,23 +1,33 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Frutas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Ordenar Números</title>
+    <title>Manipular Números em um Array</title>
 </head>
+
 <body>
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h2 class="card-title">Inserir e Ordenar Números</h2>
-                        <input type="number" id="numberInput" class="form-control mb-3" placeholder="Digite um número">
-                        <button id="insertButton" class="btn btn-primary">Inserir Número</button>
-                        <button id="sortButton" class="btn btn-success">Ordenar Números</button>
-                        <div id="resultContainer" class="mt-3"></div>
+                        <h2 class="card-title">Manipular Números em um Array</h2>
+                        <input type="number" id="entradaNumero" class="form-control mb-3" placeholder="Digite um número">
+                        <button id="inserirBotao" class="btn btn-primary">Inserir Número</button>
+                        <button id="ordenarBotao" class="btn btn-success">Ordenar Números (Crescente)</button>
+                        <button id="ordenarDescBotao" class="btn btn-warning">Ordenar Números (Decrescente)</button>
+                        <button id="mostrarOriginalBotao" class="btn btn-info">Mostrar na Ordem Original</button>
+                        <br>
+                        <input type="number" id="buscarNumeroEntrada" class="form-control mt-3"
+                            placeholder="Número para Buscar/Remover/Substituir">
+                        <button id="buscarBotao" class="btn btn-primary mt-2">Buscar Número</button>
+                        <button id="removerBotao" class="btn btn-danger mt-2">Remover Número</button>
+                        <button id="substituirBotao" class="btn btn-secondary mt-2">Substituir Número</button>
+                        <div id="containerResultado" class="mt-3"></div>
                     </div>
                 </div>
             </div>
@@ -25,25 +35,78 @@
     </div>
 
     <script>
-        const numberInput = document.getElementById("numberInput");
-        const insertButton = document.getElementById("insertButton");
-        const sortButton = document.getElementById("sortButton");
-        const resultContainer = document.getElementById("resultContainer");
+        const entradaNumero = document.getElementById("entradaNumero");
+        const inserirBotao = document.getElementById("inserirBotao");
+        const ordenarBotao = document.getElementById("ordenarBotao");
+        const ordenarDescBotao = document.getElementById("ordenarDescBotao");
+        const mostrarOriginalBotao = document.getElementById("mostrarOriginalBotao");
+        const buscarNumeroEntrada = document.getElementById("buscarNumeroEntrada");
+        const buscarBotao = document.getElementById("buscarBotao");
+        const removerBotao = document.getElementById("removerBotao");
+        const substituirBotao = document.getElementById("substituirBotao");
+        const containerResultado = document.getElementById("containerResultado");
 
-        const numbersArray = [];
+        const arrayNumeros = [];
 
-        insertButton.addEventListener("click", () => {
-            const number = parseFloat(numberInput.value);
-            if (!isNaN(number)) {
-                numbersArray.push(number);
-                numberInput.value = "";
+        inserirBotao.addEventListener("click", () => {
+            const numero = parseFloat(entradaNumero.value);
+            if (!isNaN(numero)) {
+                arrayNumeros.push(numero);
+                entradaNumero.value = ""; // Limpa o campo de entrada
             }
         });
 
-        sortButton.addEventListener("click", () => {
-            const sortedNumbers = numbersArray.slice().sort((a, b) => a - b);
-            resultContainer.innerHTML = "Números em Ordem Crescente: " + sortedNumbers.join(", ");
+        ordenarBotao.addEventListener("click", () => {
+            const numerosOrdenados = arrayNumeros.slice().sort((a, b) => a - b);
+            exibirNumeros(numerosOrdenados);
         });
+
+        ordenarDescBotao.addEventListener("click", () => {
+            const numerosOrdenados = arrayNumeros.slice().sort((a, b) => b - a);
+            exibirNumeros(numerosOrdenados);
+        });
+
+        mostrarOriginalBotao.addEventListener("click", () => {
+            exibirNumeros(arrayNumeros);
+        });
+
+        buscarBotao.addEventListener("click", () => {
+            const numeroBuscado = parseFloat(buscarNumeroEntrada.value);
+            const indice = arrayNumeros.indexOf(numeroBuscado);
+            if (indice !== -1) {
+                containerResultado.innerHTML = `O número ${numeroBuscado} está na posição ${indice} do array.`;
+            } else {
+                containerResultado.innerHTML = `O número ${numeroBuscado} não foi encontrado no array.`;
+            }
+        });
+
+        removerBotao.addEventListener("click", () => {
+            const numeroRemover = parseFloat(buscarNumeroEntrada.value);
+            const indice = arrayNumeros.indexOf(numeroRemover);
+            if (indice !== -1) {
+                arrayNumeros.splice(indice, 1);
+                exibirNumeros(arrayNumeros);
+            } else {
+                containerResultado.innerHTML = `O número ${numeroRemover} não foi encontrado no array.`;
+            }
+        });
+
+        substituirBotao.addEventListener("click", () => {
+            const numeroBuscado = parseFloat(buscarNumeroEntrada.value);
+            const indice = arrayNumeros.indexOf(numeroBuscado);
+            const novoNumero = parseFloat(entradaNumero.value);
+            if (indice !== -1) {
+                arrayNumeros[indice] = novoNumero;
+                exibirNumeros(arrayNumeros);
+            } else {
+                containerResultado.innerHTML = `O número ${numeroBuscado} não foi encontrado no array.`;
+            }
+        });
+
+        function exibirNumeros(numeros) {
+            containerResultado.innerHTML = "Números: " + numeros.join(", ");
+        }
     </script>
 </body>
+
 </html>
