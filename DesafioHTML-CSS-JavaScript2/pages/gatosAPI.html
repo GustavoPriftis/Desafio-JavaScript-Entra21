@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Imagem de Gatos</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Imagem de Gato</h2>
+                        <img id="Gato" src="" alt="Imagem de Gato" class="img-fluid">
+                        <button id="refreshButton" class="btn btn-primary mt-3">Refresh</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Imagens de Gato (Top 10)</h2>
+                        <button id="fetchImagesButton" class="btn btn-primary mb-3">Buscar Imagens</button>
+                        <div id="GatosContainer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const Gato = document.getElementById("Gato");
+        
+        function refreshGato() {
+            fetch("https://api.thecatapi.com/v1/images/search")
+                .then(response => response.json())
+                .then(data => {
+                    const imageUrl = data[0].url;
+                    Gato.src = imageUrl;
+                })
+                .catch(error => {
+                    console.error("Erro ao buscar imagem de gato:", error);
+                });
+        }
+
+        document.getElementById("refreshButton").addEventListener("click", refreshGato);
+
+        function fetchAndDisplayGatos() {
+            fetch("https://api.thecatapi.com/v1/images/search?limit=10")
+                .then(response => response.json())
+                .then(data => {
+                    const GatosContainer = document.getElementById("GatosContainer");
+                    GatosContainer.innerHTML = ""; 
+                    data.forEach(catData => {
+                        const Gato = document.createElement("img");
+                        Gato.src = catData.url;
+                        Gato.alt = "Imagem de Gato";
+                        Gato.classList.add("img-fluid", "mb-3");
+
+                        GatosContainer.appendChild(Gato);
+                    });
+                })
+                .catch(error => {
+                    console.error("Erro ao buscar imagens de gato:", error);
+                });
+        }
+
+        
+        document.getElementById("fetchImagesButton").addEventListener("click", fetchAndDisplayGatos);
+
+        refreshGato();
+    </script>
+</body>
+</html>
